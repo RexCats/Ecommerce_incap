@@ -1,2 +1,9 @@
 # Ecommerce_incap
-eva4
+Evaluación 4
+
+Integrantes:
+
+    JoséFuenzalida
+    Esteban Tripaili
+    Iván Paredes
+    Javier Murillos
