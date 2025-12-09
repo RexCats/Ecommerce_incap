@@ -6,4 +6,4 @@ Integrantes:
     JoséFuenzalida
     Esteban Tripaili
     Iván Paredes
-    Javier Murillos
+    Javier Murillo
