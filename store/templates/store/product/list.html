@@ -1,0 +1,52 @@
+{% extends "store/base.html" %}
+
+{% block title %}
+    {% if category %}{{ category.name }} - {% endif %}Productos - Ecommerce Incap
+{% endblock %}
+
+{% block content %}
+    <div id="sidebar">
+        <h3>Categorías</h3>
+        <ul style="list-style: none; padding: 0;">
+            <li style="margin: 0.5rem 0;">
+                <a href="{% url 'store:product_list' %}" style="{% if not category %}font-weight: bold;{% endif %}">
+                    Todas
+                </a>
+            </li>
+            {% for c in categories %}
+                <li style="margin: 0.5rem 0;">
+                    <a href="{% url 'store:product_list_by_category' c.slug %}" 
+                       style="{% if category.slug == c.slug %}font-weight: bold;{% endif %}">
+                        {{ c.name }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div id="main">
+        <h1>{% if category %}{{ category.name }}{% else %}Todos los Productos{% endif %}</h1>
+        
+        {% if products %}
+            <div class="products">
+                {% for product in products %}
+                    <div class="product-card">
+                        {% if product.image %}
+                            <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                        {% else %}
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Crect fill='%23ddd' width='200' height='200'/%3E%3Ctext fill='%23999' font-size='20' x='50%25' y='50%25' text-anchor='middle' dy='.3em'%3ESin Imagen%3C/text%3E%3C/svg%3E" alt="Sin imagen">
+                        {% endif %}
+                        <h3>{{ product.name }}</h3>
+                        <p class="price">${{ product.price }}</p>
+                        <p>Stock: {{ product.stock }}</p>
+                        <a href="{% url 'store:product_detail' product.id product.slug %}" class="btn">
+                            Ver Detalles
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p>No hay productos disponibles{% if category %} en esta categoría{% endif %}.</p>
+        {% endif %}
+    </div>
+{% endblock %}
