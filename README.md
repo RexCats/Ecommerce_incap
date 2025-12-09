@@ -94,6 +94,17 @@ Ecommerce_incap/
 2. Iniciar sesión con las credenciales del superusuario
 3. Gestionar categorías, productos, órdenes desde el panel
 
+## Notas de Seguridad
+
+⚠️ **IMPORTANTE**: Este proyecto incluye configuraciones de desarrollo. Antes de usar en producción:
+
+1. Cambiar el `SECRET_KEY` en `settings.py` por una clave única y segura
+2. Configurar `DEBUG = False`
+3. Configurar `ALLOWED_HOSTS` con los dominios apropiados
+4. Usar variables de entorno para credenciales sensibles
+5. Configurar un servidor de base de datos robusto (PostgreSQL, MySQL)
+6. Configurar servidor web apropiado (Gunicorn, uWSGI con Nginx)
+
 ## Tecnologías Utilizadas
 
 - Django 6.0
