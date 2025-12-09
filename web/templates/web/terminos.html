@@ -1,0 +1,196 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Términos y Condiciones - TechArena</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{% static 'web/css/styles.css' %}">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header-top">
+      <div class="container">
+        <span>📞 Atención al cliente: +56 2 2345 6789</span>
+        <span>📍 Envíos a todo Chile</span>
+      </div>
+    </div>
+    <div class="header-main">
+      <div class="container">
+        <a href="/index.html" class="logo">TechArena</a>
+        <div class="search-bar">
+          <form class="search-form" id="searchForm">
+            <input type="text" class="search-input" placeholder="Buscar productos..." id="searchInput">
+            <button type="submit" class="search-btn">Buscar</button>
+          </form>
+        </div>
+        <div class="header-actions">
+          <a href="/carrito.html" class="cart-btn">
+            🛒
+            <span class="cart-count" id="cartCount">0</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar">
+      <div class="container">
+        <ul class="nav-list">
+          <!-- El menú se genera dinámicamente con JavaScript -->
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Breadcrumbs -->
+  <div class="container">
+    <nav class="breadcrumbs">
+      <a href="/index.html">Inicio</a> &gt; <span>Términos y Condiciones</span>
+    </nav>
+  </div>
+
+  <!-- Contenido Principal -->
+  <main class="container" style="padding: 2rem 0;">
+    <h1>Términos y Condiciones</h1>
+    <p style="margin-bottom: 2rem; color: var(--text-light);">Última actualización: Enero 2025</p>
+
+    <section style="margin-bottom: 2rem;">
+      <h2>1. Aceptación de los Términos</h2>
+      <p>Al acceder y utilizar el sitio web de TechArena, usted acepta estar sujeto a estos Términos y Condiciones de uso, todas las leyes y regulaciones aplicables, y acepta que es responsable del cumplimiento de las leyes locales aplicables.</p>
+    </section>
+
+    <section style="margin-bottom: 2rem;">
+      <h2>2. Uso del Sitio</h2>
+      <p>Este sitio web es un prototipo demostrativo de e-commerce. No se realizan transacciones reales ni se procesan pagos. El contenido es únicamente con fines educativos y de demostración.</p>
+    </section>
+
+    <section style="margin-bottom: 2rem;">
+      <h2>3. Productos y Precios</h2>
+      <p>Los productos mostrados en este sitio son ficticios. Los precios están expresados en pesos chilenos (CLP) e incluyen IVA. TechArena se reserva el derecho de modificar los precios sin previo aviso.</p>
+    </section>
+
+    <section style="margin-bottom: 2rem;">
+      <h2>4. Proceso de Compra</h2>
+      <p>El proceso de compra en este prototipo es simulado. No se requiere información de pago real. Al confirmar una compra, se mostrará un mensaje de confirmación, pero no se procesará ningún pedido real.</p>
+    </section>
+
+    <section style="margin-bottom: 2rem;">
+      <h2>5. Envíos y Entregas</h2>
+      <p>Los tiempos de entrega mencionados (2 días) son ficticios y solo para fines demostrativos. En un sitio real, TechArena realizaría envíos a todo Chile con diferentes opciones de despacho.</p>
+    </section>
+
+    <section style="margin-bottom: 2rem;">
+      <h2>6. Devoluciones y Garantías</h2>
+      <p>En un e-commerce real, TechArena ofrecería garantía en todos sus productos según la ley del consumidor chilena. Los clientes tendrían derecho a cambios y devoluciones dentro de los plazos legales establecidos.</p>
+    </section>
+
+    <section style="margin-bottom: 2rem;">
+      <h2>7. Privacidad y Protección de Datos</h2>
+      <p>Este prototipo no recopila ni almacena datos personales reales. En un sitio real, TechArena se comprometería a proteger la privacidad de sus clientes según la Ley 19.628 sobre Protección de la Vida Privada.</p>
+    </section>
+
+    <section style="margin-bottom: 2rem;">
+      <h2>8. Propiedad Intelectual</h2>
+      <p>Todo el contenido de este sitio, incluyendo textos, gráficos, logos, iconos y código, es propiedad de TechArena o de sus proveedores de contenido y está protegido por las leyes de propiedad intelectual.</p>
+    </section>
+
+    <section style="margin-bottom: 2rem;">
+      <h2>9. Limitación de Responsabilidad</h2>
+      <p>Este es un prototipo demostrativo. TechArena no se hace responsable de ningún daño directo, indirecto, incidental o consecuente que resulte del uso o la imposibilidad de usar este sitio.</p>
+    </section>
+
+    <section style="margin-bottom: 2rem;">
+      <h2>10. Modificaciones</h2>
+      <p>TechArena se reserva el derecho de revisar estos términos en cualquier momento sin previo aviso. Al usar este sitio web, usted acepta estar sujeto a la versión actual de estos Términos y Condiciones.</p>
+    </section>
+
+    <section style="margin-bottom: 2rem;">
+      <h2>11. Contacto</h2>
+      <p>Para cualquier consulta sobre estos Términos y Condiciones, puede contactarnos en:</p>
+      <ul style="margin-left: 2rem;">
+        <li>📧 Email: contacto@techarena.cl</li>
+        <li>📞 Teléfono: +56 2 2345 6789</li>
+        <li>📍 Dirección: Av. Providencia 1234, Providencia, Santiago, Chile</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <!-- Información de Contacto -->
+        <div class="footer-section footer-info">
+          <h3>Contacto</h3>
+          <p>
+            <span class="icon">📍</span>
+            <span>Av. Providencia 1234, Providencia<br>Santiago, Chile</span>
+          </p>
+          <p>
+            <span class="icon">📞</span>
+            <span>+56 2 2345 6789</span>
+          </p>
+          <p>
+            <span class="icon">📧</span>
+            <span>contacto@techarena.cl</span>
+          </p>
+          <div class="social-links">
+            <a href="https://facebook.com" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">📘</a>
+            <a href="https://instagram.com" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">📷</a>
+            <a href="https://tiktok.com" class="social-link" aria-label="TikTok" target="_blank" rel="noopener">🎵</a>
+            <a href="https://youtube.com" class="social-link" aria-label="YouTube" target="_blank" rel="noopener">📺</a>
+          </div>
+        </div>
+
+        <!-- Ayuda -->
+        <div class="footer-section">
+          <h3>Ayuda</h3>
+          <ul>
+            <li><a href="/preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+            <li><a href="/terminos.html">Términos y Condiciones</a></li>
+            <li><a href="#">Política de Privacidad</a></li>
+            <li><a href="#">Política de Devoluciones</a></li>
+            <li><a href="#">Garantías</a></li>
+          </ul>
+        </div>
+
+        <!-- Categorías -->
+        <div class="footer-section">
+          <h3>Categorías</h3>
+          <ul>
+            <li><a href="/categoria.html?cat=gaming-streaming">Gaming y Streaming</a></li>
+            <li><a href="/categoria.html?cat=computacion">Computación</a></li>
+            <li><a href="/categoria.html?cat=componentes">Componentes</a></li>
+          </ul>
+        </div>
+
+        <!-- Sobre Nosotros -->
+        <div class="footer-section">
+          <h3>TechArena</h3>
+          <ul>
+            <li><a href="#">Sobre Nosotros</a></li>
+            <li><a href="#">Trabaja con Nosotros</a></li>
+            <li><a href="#">Nuestras Tiendas</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 TechArena. Todos los derechos reservados. | Prototipo demostrativo</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="{% static 'web/js/data.js' %}"></script>
+  <script src="{% static 'web/js/app.js' %}"></script>
+</body>
+</html>
+
