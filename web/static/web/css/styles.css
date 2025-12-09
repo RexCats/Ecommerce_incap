@@ -1,101 +1,192 @@
-/* TechArena - Estilos Globales */
+/* TechStore - Estilos Globales Modernos */
 :root {
-  --primary-color: #0066cc;
-  --primary-dark: #004c99;
-  --secondary-color: #ff6600;
-  --text-dark: #1a1a1a;
-  --text-light: #666;
-  --border-color: #e0e0e0;
-  --bg-light: #f5f5f5;
-  --success-color: #28a745;
-  --warning-color: #ffc107;
-  --danger-color: #dc3545;
-  --white: #ffffff;
-  --shadow: 0 2px 8px rgba(0,0,0,0.1);
-  --shadow-hover: 0 4px 16px rgba(0,0,0,0.15);
+  --primary: #00d4ff;
+  --primary-dark: #00a8cc;
+  --secondary: #ff006e;
+  --accent: #8338ec;
+  --accent-2: #3a86ff;
+  --bg: #0a0e27;
+  --bg-secondary: #0f1229;
+  --bg-card: #1a1f3a;
+  --bg-hover: #252b4a;
+  --text: #e8eaf6;
+  --text-light: #9ca3af;
+  --border: #2d3454;
+  --success: #00ff88;
+  --danger: #ff0055;
+  --shadow: 0 4px 6px rgba(0,0,0,0.4);
+  --shadow-lg: 0 20px 40px rgba(0,0,0,0.6);
+  --shadow-glow: 0 0 20px rgba(0, 212, 255, 0.3);
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-accent: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --gradient-cyber: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  --gradient-success: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
 }
 
-* {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box !important;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  color: var(--text-dark);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  background-image:
+    radial-gradient(at 0% 0%, rgba(102, 126, 234, 0.1) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(131, 56, 236, 0.1) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(0, 212, 255, 0.1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(255, 0, 110, 0.1) 0px, transparent 50%);
   line-height: 1.6;
-  background-color: var(--white);
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100vw;
 }
 
 /* Header y Navbar */
 .header {
-  background-color: var(--white);
-  box-shadow: var(--shadow);
+  background: var(--bg-card);
+  background: linear-gradient(180deg, rgba(26, 31, 58, 0.95) 0%, rgba(26, 31, 58, 0.98) 100%);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5), 0 0 1px rgba(0, 212, 255, 0.3);
+  border-bottom: 1px solid rgba(0, 212, 255, 0.1);
   position: sticky;
   top: 0;
   z-index: 1000;
+  width: 100%;
 }
 
 .header-top {
-  background-color: var(--primary-color);
-  color: var(--white);
-  padding: 0.5rem 0;
+  background: var(--gradient-primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  text-align: center;
   font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
 }
 
-.header-top .container {
+.navbar {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-}
-
-.header-main {
-  padding: 1rem 0;
-}
-
-.header-main .container {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
+  padding: 1rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box !important;
+  gap: 1rem;
 }
 
 .logo {
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: var(--primary-color);
+  font-size: 1.5rem;
+  font-weight: 800;
+  background: var(--gradient-cyber);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   text-decoration: none;
+  filter: drop-shadow(0 0 10px rgba(0, 212, 255, 0.5));
   white-space: nowrap;
 }
 
 .search-bar {
   flex: 1;
-  max-width: 600px;
+  max-width: 500px;
+  margin: 0 2rem;
+  position: relative;
 }
 
-.search-form {
-  display: flex;
-  border: 2px solid var(--primary-color);
-  border-radius: 4px;
-  overflow: hidden;
+.search-bar input {
+  width: 100%;
+  padding: 0.75rem 3rem 0.75rem 1rem;
+  background: var(--bg-secondary);
+  border: 2px solid var(--border);
+  border-radius: 12px;
+  font-size: 0.95rem;
+  color: var(--text);
+  transition: all 0.3s ease;
 }
 
-.search-input {
-  flex: 1;
-  padding: 0.75rem 1rem;
-  border: none;
-  font-size: 1rem;
+.search-bar input::placeholder {
+  color: var(--text-light);
+}
+
+.search-bar input:focus {
   outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1), var(--shadow-glow);
+  background: var(--bg-card);
 }
 
 .search-btn {
-  background-color: var(--primary-color);
-  color: var(--white);
-  border: none;
-  padding: 0.75rem 1.5rem;
-  cursor: pointer;
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--gradient-cyber);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
   font-weight: 600;
-  transition: background-color 0.3s;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+  border: none;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  transform: translateY(-50%) scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 212, 255, 0.5);
+}
+
+.nav-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.cart-btn {
+  position: relative;
+  background: linear-gradient(135deg, #4cc9f0, #7b2ff7, #f72585);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(247, 37, 133, 0.3);
+  text-decoration: none;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.cart-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(247, 37, 133, 0.5);
+}
+
+.cart-count {
+  background: var(--success);
+  color: var(--bg);
+  border-radius: 50%;
+  min-width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+  padding: 0 4px;
 }
 
 .search-btn:hover {

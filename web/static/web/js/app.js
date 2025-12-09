@@ -1,4 +1,4 @@
-// TechArena - Aplicación Principal
+// TechStore - Aplicación Principal
 (function() {
   'use strict';
 
@@ -128,7 +128,7 @@
     // Agregar enlace de inicio
     const homeItem = document.createElement('li');
     homeItem.className = 'nav-item';
-    homeItem.innerHTML = '<a href="/index.html" class="nav-link">Inicio</a>';
+    homeItem.innerHTML = '<a href="/" class="nav-link">Inicio</a>';
     navList.appendChild(homeItem);
     
     // Generar menú desde catálogo
